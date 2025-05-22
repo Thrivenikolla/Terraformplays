@@ -1,0 +1,17 @@
+provider "aws" {
+    region = "us-east-1"
+}
+
+resource "aws_s3_bucket" "new_bucket" {
+    bucket = "hihellofromsritf"
+    tags = {
+        Name = "hihellofromsritf"
+    }
+}
+
+resource "aws_s3_bucket_versioning" "new_bucket" {
+    bucket = aws_s3_bucket.new_bucket.id
+    versioning_configuration {
+        status = "Enabled" 
+    }
+}
