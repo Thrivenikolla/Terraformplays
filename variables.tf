@@ -1,8 +1,12 @@
-variable "instance_type" {
-    description = "EC2 instance type"
+variable "tags" {
+    description = "tags for ec2"
+    type        = list(map(string))
 }
 
+variable "ami" {
+    default = "ami-0953476d60561c955"
+}
 
-variable "cidrvalue" {
-    description = "cidrvalue for ec2"
+variable "instance_type" {
+    default = "t2.micro"
 }
