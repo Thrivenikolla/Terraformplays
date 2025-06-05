@@ -1,12 +1,11 @@
 provider "aws" {
-    region = "us-east-1"
+  region = "us-east-1"
 }
 
-module "aws_ec2" {
-    source = "./modules/ec2"
-    tags = [
-    { Name = "MyEC2", Env  = "Dev"},
-    { Name = "MyEC2", Env  = "Prod"},
-    { Name = "MyEC2", Env  = "Test" }
-]
+module "ec2_1" {
+  source            = "./module/ec2"
+  ami               = var.ami
+  instance_type     = var.instance_type
+  subnet_cidr_block = var.subnet_cidr_block
+  vpc_cidr_block    = var.vpc_cidr_block
 }
