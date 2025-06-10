@@ -10,7 +10,7 @@ terraform {
 provider "github" {
   token = "tokenhere"
 }
- 
+
 resource "github_repository" "terraform" {
     name = "terraform"
     description = "created by terraform"
