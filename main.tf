@@ -8,4 +8,4 @@ module "ec2_1" {
   instance_type     = var.instance_type
   subnet_cidr_block = var.subnet_cidr_block
   vpc_cidr_block    = var.vpc_cidr_block
-} 
+}
