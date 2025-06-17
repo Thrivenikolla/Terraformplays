@@ -21,5 +21,5 @@ resource "aws_vpc_security_group_ingress_rule" "practice-sg" {
     cidr_ipv4 = var.cidrvalue
     from_port = 22
     to_port = 22
-    
+   
 }
